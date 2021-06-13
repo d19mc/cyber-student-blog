@@ -5,6 +5,6 @@
     <link>http://example.org/</link>
     <description>Recent content on Cyber Student</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
