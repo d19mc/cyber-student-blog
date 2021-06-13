@@ -1,7 +1,7 @@
 ---
 title: "Breakdown of a Computer Virus"
 date: 2021-05-08T13:58:05-04:00
-draft: true
+draft: false
 ---
 
 # Preface
