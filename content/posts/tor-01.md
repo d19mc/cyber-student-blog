@@ -14,10 +14,13 @@ John wants to be anonymous on the internet. Maybe John is in a situation where h
 
 I think that this is best explained by viewing the process from the perspective of the TOR Browser. Here are the tasks that the TOR Browser executes when it's launched: 
 
-1. Get the IPs of 3 nodes
+1. IP Collection
 2. Key Exchanges
-3. Make a request
 
-# IP Collection
+## IP Collection
 
-When the TOR Browser was launched, it collected the IP addresses of three servers from the TOR network. These servers are loosely called TOR nodes and are stored on TOR's servers on a server called the TOR directory. When the TOR browser started up, it requested the TOR directory for three IP addresses in the TOR network and the TOR directory returned as requested.
+When the TOR Browser was launched, it collected the IP addresses of three TOR servers from a public server called the TOR directory. These three servers are generally referred to as TOR relays or TOR nodes and comprise a guard relay, a middle relay, and an exit relay. After the Key Exchanges in the next section, these three relays will form the TOR circuit that'll keep John anonymous as he surfs the web.
+
+## Key Exchanges
+
+John now has the three IP addresses  
