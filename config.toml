@@ -2,3 +2,28 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Cyber Student"
 theme = "cactus"
+
+[params]
+
+  colortheme = "white"
+  description = ""
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Writings"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
