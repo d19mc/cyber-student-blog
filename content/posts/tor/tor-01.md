@@ -1,7 +1,10 @@
 ---
 title: "Understanding TOR: [01] Standard Insight"
-date: 2021-05-20T09:58:44-04:00
-draft: true
+date: 2021-06-27T12:00:00-04:00
+draft: false
+tags:
+    - TOR
+    - Networking
 ---
 
 # Preface
@@ -19,17 +22,37 @@ I think that this is best explained by viewing the process from the perspective 
 
 ## IP Collection
 
-When the TOR Browser was launched, it collected the IP addresses of three TOR servers from a public server called the TOR directory. These three servers are generally called TOR relays or TOR relays and comprise a guard relay, a middle relay, and an exit relay. 
+When the TOR Browser is launched, it collects the IP addresses of three TOR servers from a public server called the TOR directory. The collected servers are called TOR nodes or TOR relays and comprise a guard relay, a middle relay, and an exit relay. 
 
 ## Key Exchanges
 
-The TOR Browser does a Diffie-Hellman exchange with each of the three TOR relays that it collected from the TOR directory in the previous step. After this exchange, John's TOR Browser has 3 keys to encrypt and decrypt messages with each of the TOR relays and each of the TOR relays have the corresponding key to encrypt and decrypt data to John's TOR Browser.
+The TOR Browser does a Diffie-Hellman Key Exchange with each collected TOR relay. After this exchange, John's TOR Browser has three keys. One key to corrospond with each TOR relay. The TOR relays have the corresponding key to encrypt and decrypt data to John's TOR Browser. 
 
 # The Request
 
-Let's say that John wants to send request A to server X after his browser has completed the steps above.
+Let's say that John wants to send request A to server X.
+![Visual representation of request A](tor-01-requestA.jpg)
 
 ## The Encryption
 
-Request A, by default, has the source IP of John and the destination IP of X. The browser will change the source IP of request A to the exit relay's IP and then proceed to encrypt the *entire* request and places it into request B. Request A was encrypted by the shared key between the browser and the exit relay. 
+**Request A:** The browser will change the source IP to the exit relay's IP. 
+![Visual representation of request A after change](tor-01-requestA2.jpg)
 
+**Request B:** It'll then encrypt request A with the exit relay's shared key and place it into another request: request B. Request B is given the source IP of the middle relay and the destination IP of the exit relay. 
+![Visual representation of request B](tor-01-requestB.jpg)
+
+**Request C:** It'll encrypt request B with the shared key between the browser and the middle relay and place it into another request: request C. Request C is given the source IP of the guard relay and the destination IP of the middle relay. 
+![Visual representation of request C](tor-01-requestC.jpg)
+
+**Reqeust D:** It'll encrypt request C with the shared key between the browser and the guard relay and place it into another request: request D. Request D now has the source IP of John and the destination IP of the guard relay.
+![Visual representation of request D](tor-01-requestD.jpg)
+
+### The Onion
+
+I hope that you can see why TOR is associated with an onion. Each request is encrypted and placed into another request; hence, the layers of an onion.
+
+## The Decryption
+
+Now the browser will send request D and have it go through each relay. First the guard relay, then the middle relay, and then the exit relay before going off to the server. As the request goes through the TOR circuit, it will decrypt the request when it reaches the relay with the corrosponding decryption key. When a request is decrypted, it will find another request which it would then send off to the next relay on the circuit until it reaches the server.
+
+When the Request comes back from the server, it will follow the same path in reverse and encrypt the packet at each station until John recieves it. The browser will decrypt each layer off of the packet and present John with the data that he requested from the server.
