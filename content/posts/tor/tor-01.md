@@ -1,9 +1,9 @@
 ---
-title: "Understanding TOR: [01] Standard Insight"
+title: "How Tor Works: [01] Becoming Anonymnous"
 date: 2021-06-27T12:00:00-04:00
 draft: false
 tags:
-    - TOR
+    - Tor
 ---
 
 # Preface
@@ -12,7 +12,7 @@ TOR is absolutely bonkers; keeping its users anonymous regardless of where or wh
 
 # The Setup
 
-Let's say that there's a guy named John. John wants to be anonymous on the internet. Maybe John is in a situation where he has a really sensitive question that he wouldn't want anyone to know; what does he do? He uses TOR. He proceeds to start the TOR Browser and go to a forum on the deepweb. What happened there? How did John suddenly become anonymous by launching a browser?
+Let's say that there's a guy named John. John wants to be anonymous on the internet. Maybe John is in a situation where he has a really sensitive question that he wouldn't want anyone to know; what does he do? He uses TOR. He proceeds to start the TOR Browser and go to a forum on the clearnet. What happened there? How did John suddenly become anonymous by launching a browser?
 
 I think that this is best explained by viewing the process from the perspective of the TOR Browser. Here are the tasks that the TOR Browser executes when it's launched: 
 
