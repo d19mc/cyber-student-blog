@@ -1,7 +1,7 @@
 ---
 title: "How Tor Works: [02] Connecting to Onion Services"
 date: 2021-07-18T13:00:00-04:00
-draft: true
+draft: false
 tags:
     - Tor
     - Onion Services
@@ -24,7 +24,7 @@ I've only recently learned how onion services work, but I can say that it was qu
 - Digital Signatures (Large sections of the process won't make sense without this)
 - Diffie-Hellman Key Exchange
 
-If you want to know how these work or what they are, I've covered them in separate posts: [How Tor Works: [01] Becoming Anonymous](https://www.cyberstudent.blog/posts/tor/tor-01/) and [How Digital Signatures Work]().
+If you want to know how these work or what they are, I've covered them in separate posts: [How Tor Works: [01] Becoming Anonymous](https://www.cyberstudent.blog/posts/tor/tor-01/), [How Digital Signatures Work](), and [The Diffie-Hellman Key Exchange]().
 
 # Starting the Onion Service
 
