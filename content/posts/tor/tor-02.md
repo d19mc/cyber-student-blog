@@ -5,6 +5,7 @@ draft: false
 tags:
     - Tor
     - Onion Services
+banner: images/posts/tor-02/smallServerImg.jpg
 ---
 
 # Preface
@@ -15,16 +16,12 @@ I've only recently learned how onion services work, but I can say that it was qu
 
 **TL?; Please Read**: There is a lot of detail in this post; hence, the length. Even though I have tried to simplify and condense as much information as I could, the post is still quite a long read.
 
-![Image of several ethernet cables connecting to server](smallServerImg.jpg)
-
 ## Prerequisites
 
 - Common tor terms (guard relay, middle relay, tor directory, etc.)
 - How Tor performs its layered encryption 
 - Digital Signatures (Large sections of the process won't make sense without this)
 - Diffie-Hellman Key Exchange
-
-If you want to know how these work or what they are, I've covered them in separate posts: [How Tor Works: [01] Becoming Anonymous](https://www.cyberstudent.blog/posts/tor/tor-01/), [How Digital Signatures Work](), and [The Diffie-Hellman Key Exchange]().
 
 # Starting the Onion Service
 
@@ -35,7 +32,7 @@ If you want to know how these work or what they are, I've covered them in separa
 
 The first thing a new onion service does is find at least three Introduction Points. These Introduction Points can be any server on the Tor network and will be routing traffic to the hosting server. The potential Introduction Point can accept or deny the request to introduce the service. The potential Introduction Point doesn't know what the server is hosting nor does it know its IP address. That is because the traffic goes through two tor relays before reaching the Introduction Point.
 
-If the Introduction Point agrees to introduce tor traffic to the server, the hosting server shares its public key and [digitally signs]() each of its messages to the Introduction Point from that point onwards. This way the Introduction Point can be sure that it's getting the message from the correct server.
+If the Introduction Point agrees to introduce tor traffic to the server, the hosting server shares its public key and digitally signs each of its messages to the Introduction Point from that point onwards. This way the Introduction Point can be sure that it's getting the message from the correct server.
 
 ### Common Questions
 
@@ -58,7 +55,7 @@ In the [previous post](https://www.cyberstudent.blog/posts/tor/tor-01/), the las
 
 ## Generating the .onion URL
 
-The actual process of generating the .onion URL is extremely complex. It requires the understanding of public-private key encryption, distributed hash tables, hash checksums, and more. I couldn't find a way to cover this process within this post without it becoming clutter; I've covered it in a [separate post](). 
+The actual process of generating the .onion URL is extremely complex. It requires the understanding of public-private key encryption, distributed hash tables, hash checksums, and more. I couldn't find a way to cover this process within this post without it becoming clutter; I've covered it in a separate post. 
 
 ## Adding the .onion URL to Tor directory
 
