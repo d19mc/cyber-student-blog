@@ -19,7 +19,7 @@ theme = "hugo-icarus"
 
 [params]
     # Tell me who you are
-    author = "Dev Patel"
+    author = "Cyber Student"
     bio = "The best way to learn is to teach; hence, this blog."
     location = "Tor Network"
     site_description = "I enjoy learning about computers and networks. Every fortnight, I publish a post that goes over what I've learnt over that time in hopes that I can teach you something new."
