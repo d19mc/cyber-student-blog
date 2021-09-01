@@ -5,6 +5,8 @@ draft: false
 tags:
     - Tor
     - Onion Services
+categories: 
+    - Anonymity
 banner: images/posts/tor-02/onion.jpg
 ---
 

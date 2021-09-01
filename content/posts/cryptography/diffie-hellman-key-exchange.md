@@ -3,9 +3,9 @@ title: "The Diffie-Hellman Key Exchange"
 date: 2021-09-05T12:00:00-04:00
 draft: false
 tags:
-    - Cryptography
     - Key Exchange
-    - Encryption
+categories:
+    - Cryptography
 banner: images/posts/diffie-hellman-key-exchange/keys.jpg
 ---
 

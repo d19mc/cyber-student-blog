@@ -4,6 +4,8 @@ date: 2021-06-27T12:00:00-04:00
 draft: false
 tags:
     - Tor
+categories:
+    - Cryptography
 banner: images/posts/tor-01/smallServerImg.jpg
 ---
 
