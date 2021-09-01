@@ -5,7 +5,7 @@ draft: false
 tags:
     - Tor
     - Onion Services
-banner: images/posts/tor-02/smallServerImg.jpg
+banner: images/posts/tor-02/onion.jpg
 ---
 
 # Preface

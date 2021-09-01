@@ -67,10 +67,10 @@ theme = "hugo-icarus"
     label  = "Tags"
     link   = "tags/"
 
-[[params.menu]]
-    before = false
-    label  = "Categories"
-    link   = "categories/"
+# [[params.menu]]
+#     before = false
+#     label  = "Categories"
+#     link   = "categories/"
 
 # Enter a link for the follow button on the left
 # [params.profile]
@@ -101,7 +101,7 @@ theme = "hugo-icarus"
     xing            = ""
     linkedin        = ""
     slideshare      = ""
-    stackoverflow   = "16799834"
+    stackoverflow   = ""
     reddit          = ""
     pinterest       = ""
     googleplus      = ""
