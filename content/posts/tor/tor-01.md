@@ -5,7 +5,7 @@ draft: false
 tags:
     - Tor
 categories:
-    - Cryptography
+    - Anonymity
 banner: images/posts/tor-01/smallServerImg.jpg
 ---
 
