@@ -74,7 +74,7 @@ theme = "hugo-icarus"
 
 # Enter a link for the follow button on the left
 [params.profile]
-    follow_button = "https://github.com/CyberStudentBlog/"
+    follow_button = "https://www.instagram.com/cyberstudent.blog/"
 
 
 [social]
