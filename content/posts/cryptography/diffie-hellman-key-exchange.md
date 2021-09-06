@@ -35,7 +35,7 @@ The Diffie-Hellman Key Exchange provides a way to exchange the same key without 
 
 ![Diagram of two clients connecting to central server](ETEEdiagram.jpg)
 
-Although the server is relaying data between the clients, it will be unable to undersrtand any of it. 
+Although the server is relaying data between the clients, it will be unable to understand any of it. 
 
 ---
 
@@ -93,10 +93,10 @@ If you're fluent with Moduluar mathematics and are familiar with cyclic numbers,
 ---
 
 To complete the Diffie-Hellman Key Exchange, Bob will do:
-<span style="font-size:1.5rem;">$$(g^amodn)^b$$</span>
+<span style="font-size:1.5rem;">$$(g^bmodn)^a$$</span>
 
 ...and Alice will do:
-<span style="font-size:1.5rem;">$$(g^bmodn)^a$$</span>
+<span style="font-size:1.5rem;">$$(g^amodn)^b$$</span>
 
 and in both these cases, the answer is
 <span style="font-size:1.5rem;">$$g^{ab}modn$$</span>
