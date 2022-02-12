@@ -1,7 +1,7 @@
 ---
 title: "Setting up WeeChat for IRC"
 date: 2022-01-16T00:00:00-05:00
-draft: true
+draft: false
 tags:
     - irc
     - linux
