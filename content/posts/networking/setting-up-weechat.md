@@ -88,7 +88,7 @@ Now, you won't have to register a new nick when you join. You'll instead sign in
 /msg nickserv identify [password]
 ```
 
-## Coneecting to Chat channels.
+## Connecting to Chat channels.
 
 I typically like to hang out at ##chat and #linux. Libera Chat; however, has a [plethora of channels](https://netsplit.de/channels/?net=libera.chat&num=10) that you could join. 
 
